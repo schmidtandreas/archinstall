@@ -62,7 +62,7 @@ def initialize_arguments():
 			else:
 				key, val = arg[2:], True
 			config[key] = val
-	config["script"] = args.script
+	config["script"] = config["script"] or args.script
 	if args.dry_run is not None:
 		config["dry_run"] = args.dry_run
 	return config
